@@ -13,7 +13,7 @@ public class DefaultHandlerInterceptor implements HandlerInterceptor, ErrorPageR
 
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-
+		System.out.printf("handler");
 		return true;
 	}
 

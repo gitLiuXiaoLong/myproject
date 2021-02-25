@@ -9,21 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@RestController
 @SpringBootApplication
-public class SpringRestWebApplication implements WebMvcConfigurer {
-
-	@RequestMapping("/")
-	String init() {
-		return "Hello word";
-	}
+public class SpringRestWebApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringRestWebApplication.class, args);
 	}
 
-	@Override
+	/*@Override
 	public void addInterceptors (InterceptorRegistry registry) {
 		registry.addInterceptor(new DefaultHandlerInterceptor());
-	}
+	}*/
 }

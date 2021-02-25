@@ -1,24 +1,19 @@
 package com.study.example.rest.demo.model;
 
-public class Person {
+
+import lombok.Data;
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
+
+@Component
+@Data
+public class Person implements Serializable {
 
 	private Long id;
 
 	private String name;
 
-	public String getName () {
-		return name;
-	}
+	private String sex;
 
-	public void setName (String name) {
-		this.name = name;
-	}
-
-	public Long getId () {
-		return id;
-	}
-
-	public void setId (Long id) {
-		this.id = id;
-	}
 }
