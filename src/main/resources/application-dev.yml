@@ -3,10 +3,10 @@ logging:
   level:
     com.study.example.rest: debug
 
-#freemarker引擎模板
+#freemarker锟斤拷锟斤拷模锟斤拷
 spring:
   freemarker:
-    template-loader-path: classpath:/templates/  # classpath:  一定不能漏写
+    template-loader-path: classpath:/templates/
     cache: false
     charset: UTF-8
     check-template-location: true

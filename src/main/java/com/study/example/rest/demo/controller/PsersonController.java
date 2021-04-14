@@ -56,6 +56,7 @@ public class PsersonController {
 		Map<String,Object> error = new HashMap<>();
 		error.put("statusCode",request.getAttribute("javax.servlet.error.status_code"));
 		error.put("requestUri",request.getAttribute("javax.servlet.error.request_uri"));
+
 		return error;
 	}
 }
