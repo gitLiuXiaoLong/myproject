@@ -8,6 +8,7 @@ import fr.opensagres.xdocreport.document.IXDocReport;
 import fr.opensagres.xdocreport.document.registry.XDocReportRegistry;
 import fr.opensagres.xdocreport.template.IContext;
 import fr.opensagres.xdocreport.template.TemplateEngineKind;
+import io.micrometer.core.instrument.util.StringUtils;
 
 import java.io.*;
 import java.text.DecimalFormat;
@@ -18,10 +19,25 @@ import java.util.UUID;
 public class IXDocReportTest {
 
     public static void main(String[] args) {
-        String fileUrl = createReceivePdf(new Object());
+        /*String fileUrl = createReceivePdf(new Object());
         System.out.println(fileUrl);
+*/
+        getNStr("我是一根村");
     }
 
+    public static String getNStr(String bef){
+        StringBuffer sb = new StringBuffer();
+        if (StringUtils.isNotBlank(bef)){
+            char[] arr = bef.toCharArray();
+            for (int i = 0; i < arr.length; i++) {
+                char a = arr[i];
+                sb.append(String.valueOf(a) + "\n") ;
+            }
+        }
+        sb.toString();
+        System.out.println(sb);
+        return null;
+    }
     /**
      * 创建收款单
      * @param  obj 需要 合同数据(合同包含的费用数据 合同的首期账单) 账单数据 费用数据 收款记录数据 审核记录
